@@ -1,0 +1,10 @@
+name:testenemy
+coll:Enemy1
+HP:4
+state:1,1,0.0,100,false
+move:1,2t,1,0.0,100,false
+state:2,0.01,0.0,1,false
+homing:3,0.0,0.01,0.0,1,false,myfighter,false
+state:3,1,0.0,200,true
+outdelete:true
+move:1,-t,3,0.0,999,true

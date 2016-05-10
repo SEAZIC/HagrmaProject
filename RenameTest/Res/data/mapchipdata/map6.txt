@@ -1,0 +1,9 @@
+image : mapchipImage/chipset1.png
+name : block6
+mapID : 6
+posx : 384 
+posy : 128
+sizex : 16
+sizey : 16
+chipsizex : 16
+chipsizey : 16

@@ -1,0 +1,22 @@
+image : mapchipImage/chipset1.png
+name : block11
+mapID : 11
+posx : 0 
+posy : 224
+sizex : 16
+sizey : 16
+chipsizex : 16
+chipsizey : 16
+down_hit{
+target:player
+overwrite:true
+chenge:4,0,0
+chenge:3,-1,-4
+chenge:3,0,-4
+chenge:3,1,-4
+chenge:3,2,-4
+chenge:2,-1,-5
+chenge:2,0,-6
+chenge:2,1,-6
+chenge:2,2,-6
+}

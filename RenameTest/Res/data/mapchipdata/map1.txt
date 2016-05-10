@@ -1,0 +1,9 @@
+image : mapchipImage/chipset1.png
+name : blocktop
+mapID : 1
+posx : 0 
+posy : 192
+sizex : 16
+sizey : 16
+chipsizex : 16
+chipsizey : 16

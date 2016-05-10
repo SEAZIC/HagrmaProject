@@ -1,0 +1,10 @@
+name:testenemy
+coll:Enemy1
+HP:3
+state:1,1,0.0,100,false
+move:1,2t,1,0.0,100,false
+state:2,0.03,0.0,6.28318,false
+move:30(1+2cos(t))sin(t),30((1+2cos(t))cos(t)-3),0.03,0.0,6.28318,true
+state:3,1,0.0,200,true
+outdelete:true
+move:1,-t,3,0.0,999,true

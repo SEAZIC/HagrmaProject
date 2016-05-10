@@ -1,0 +1,13 @@
+name:testenemy
+coll:Enemy1
+image:shootingGame/stage1/enemyImage/enemytestImage.png,testenemyimage1,30,40
+HP:2
+state:1,1,0.0,50,false
+move:1,2t,1,0.0,50,false
+bullet:straight,500,20,20,5,1.5707
+state:2,0.5,0.0,100.0,false
+homing:3,0.3,0.01,0.0,1,false,myfighter,true
+bullet:straight,500,20,20,5,1.5707
+state:3,1,0.0,200,true
+outdelete:true
+move:1,-t,3,0.0,999,true

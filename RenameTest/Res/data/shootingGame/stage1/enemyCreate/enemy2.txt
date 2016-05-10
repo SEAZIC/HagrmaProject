@@ -1,0 +1,6 @@
+10.0,80.0,30.0,30.0,testEnemy,free,20sin(t)(1+cos(t)),20cos(t)(1-cos(t)),0.03,0.0,6.28318,true
+110.0,0.0,30.0,30.0,testEnemy,free,1,2t,1,0.0,100,false
+210.0,80.0,30.0,30.0,testEnemy,free,20sin(t)(1+cos(t)),20cos(t)(1-cos(t)),0.03,0.0,6.28318,true
+310.0,80.0,30.0,30.0,testEnemy,free,20sin(t)(1+cos(t)),20cos(t)(1+cos(t)),0.03,0.0,6.28318,true
+410.0,80.0,30.0,30.0,testEnemy,free,100(1+2cos(t))sin(t),100(1+2cos(t))cos(t),0.03,0.0,6.28318,true
+110.0,0.0,30.0,30.0,testEnemy,moves,1,2t,1,0.0,100,false,1,1,0.03,0.0,6.28318,false,1,-t,1,0.0,200,false

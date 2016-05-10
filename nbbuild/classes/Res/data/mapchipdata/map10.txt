@@ -1,0 +1,17 @@
+image : mapchipImage/chipset1.png
+name : block10
+mapID : 10
+posx : 160
+posy : 0
+sizex : 16
+sizey : 16
+chipsizex : 16
+chipsizey : 16
+block : true
+upthrow:true
+leftthrow:true
+downthrow:true
+right_hit{
+target:player
+chenge:2,0,0
+}

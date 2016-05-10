@@ -1,0 +1,5 @@
+15.5,7.0,2.0,2.0,testEnemy
+13.5,7.0,2.0,1.0,testEnemy
+12.5,7.0,1.0,2.0,testEnemy
+19.5,7.0,2.0,1.5,testEnemy
+16.5,7.0,2.0,8.0,testEnemy
