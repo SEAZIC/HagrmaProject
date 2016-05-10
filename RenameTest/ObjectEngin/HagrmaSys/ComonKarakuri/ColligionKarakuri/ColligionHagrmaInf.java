@@ -6,14 +6,16 @@ package ObjectEngin.HagrmaSys.ComonKarakuri.ColligionKarakuri;
  * マップとの当たり判定などプッシュされた方からものがぶつかったことを表すメソッド
  * 現在はマップクラスを使用している時のみ使用可能
  * </PRE>
- *  */
+ *
+ */
 public interface ColligionHagrmaInf {
 
-	public void RightPushed();
-	public void LeftPushed();
-	public void UpPushed();
-	public void DownPushed();
-	
-	
-	
+    public void RightPushed();
+
+    public void LeftPushed();
+
+    public void UpPushed();
+
+    public void DownPushed();
+
 }

@@ -7,9 +7,9 @@ import java.util.LinkedList;
 
 import ObjectEngin.HagrmaSys.Hagrma;
 
-public class MouseHagrma extends Hagrma{
+public class MouseHagrma extends Hagrma {
 
-	synchronized public void mouseEventListner(int eventName,MouseEvent e){
-		
-	}
+    synchronized public void mouseEventListner(int eventName, MouseEvent e) {
+
+    }
 }

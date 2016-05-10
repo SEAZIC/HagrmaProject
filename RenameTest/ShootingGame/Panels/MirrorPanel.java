@@ -35,117 +35,117 @@ import ShootingGame.GameObject.Myfighter;
 import ShootingGame.GameObject.RangeObject;
 import ShootingGame.StateHagrma.StateKarakuri;
 
-public class MirrorPanel extends JPanel implements BaseFrameWork_Panel,WindowListener{
+public class MirrorPanel extends JPanel implements BaseFrameWork_Panel, WindowListener {
 
-	private ObjectManager OM;
-	private int[][] map;
+    private ObjectManager OM;
+    private int[][] map;
 
-	private KeyinputKarakuri KIK;
-	
-	public MirrorPanel() {
-		setOpaque(false);
-		OM = new ObjectManager();
-		
-		KIK = new KeyinputKarakuri();
-		MoveKarakuri movekarakuri = new MoveKarakuri();
-		StateKarakuri statekarakuri = new StateKarakuri();
-		HomingKarakuri homingkarakuri = new HomingKarakuri();
-		BulletKarakuri bulletkarakuri = new BulletKarakuri();
-		CollKarakuri collkarakuri = new CollKarakuri();
-		
-		OM.addKarakuri(KIK);
-		OM.addKarakuri(movekarakuri);
-		OM.addKarakuri(statekarakuri);
-		OM.addKarakuri(homingkarakuri);
-		OM.addKarakuri(bulletkarakuri);
-		OM.addKarakuri(collkarakuri);
-		
-		String[] S = new String[]{"","Enemy1","myfighter","bullet"};
-		boolean[][] b = new boolean[][]{
-		{false,false,false,false},
-		{false,false,false,false},
-		{false,false,false,false},
-		{false,true,true,false}
-		};
-		collkarakuri.setTagMap(S, b);
-		ShootingEnemyCreater shootingenemycreater = new ShootingEnemyCreater();
-		shootingenemycreater.setCreate(OM, new ShootingEnemyManager(), 1, new ShootingEnemyReader("Res"+File.separator+"data"+File.separator+"shootingGame"+File.separator+"stage1"+File.separator+"enemyCreate"+File.separator+"enemy.txt"));
-		
-		OM.addObjct(new Myfighter());
-		
-	}
+    private KeyinputKarakuri KIK;
 
-	@Override
-	public void setParent(BaseFrameWork_Frame parent) {
-		if(parent instanceof JFrame){
-			Rectangle screen = new Rectangle(((JFrame) parent).getX(),((JFrame) parent).getY(), 400, 640);
+    public MirrorPanel() {
+        setOpaque(false);
+        OM = new ObjectManager();
+
+        KIK = new KeyinputKarakuri();
+        MoveKarakuri movekarakuri = new MoveKarakuri();
+        StateKarakuri statekarakuri = new StateKarakuri();
+        HomingKarakuri homingkarakuri = new HomingKarakuri();
+        BulletKarakuri bulletkarakuri = new BulletKarakuri();
+        CollKarakuri collkarakuri = new CollKarakuri();
+
+        OM.addKarakuri(KIK);
+        OM.addKarakuri(movekarakuri);
+        OM.addKarakuri(statekarakuri);
+        OM.addKarakuri(homingkarakuri);
+        OM.addKarakuri(bulletkarakuri);
+        OM.addKarakuri(collkarakuri);
+
+        String[] S = new String[]{"", "Enemy1", "myfighter", "bullet"};
+        boolean[][] b = new boolean[][]{
+            {false, false, false, false},
+            {false, false, false, false},
+            {false, false, false, false},
+            {false, true, true, false}
+        };
+        collkarakuri.setTagMap(S, b);
+        ShootingEnemyCreater shootingenemycreater = new ShootingEnemyCreater();
+        shootingenemycreater.setCreate(OM, new ShootingEnemyManager(), 1, new ShootingEnemyReader("Res" + File.separator + "data" + File.separator + "shootingGame" + File.separator + "stage1" + File.separator + "enemyCreate" + File.separator + "enemy.txt"));
+
+        OM.addObjct(new Myfighter());
+
+    }
+
+    @Override
+    public void setParent(BaseFrameWork_Frame parent) {
+        if (parent instanceof JFrame) {
+            Rectangle screen = new Rectangle(((JFrame) parent).getX(), ((JFrame) parent).getY(), 400, 640);
 //			setBounds(0, 0,((JFrame)parent).getWidth(), ((JFrame)parent).getHeight());
-			setBounds(screen);
-			((JFrame) parent).setBounds(screen);
-			RangeObject rangeObj = new RangeObject();
-			rangeObj.setBoundBox(new Rectangle(0, 0, this.getWidth(), this.getHeight()));
-			OM.addObjct(rangeObj);
-			OM.setOutRange(rangeObj.getBoundBox());
-			((JFrame)parent).revalidate();
-			((JFrame)parent).addKeyListener(KIK);
-			((JFrame) parent).addWindowListener(this);
-			((JFrame)parent).requestFocusInWindow();
-		}
-		
-	}
+            setBounds(screen);
+            ((JFrame) parent).setBounds(screen);
+            RangeObject rangeObj = new RangeObject();
+            rangeObj.setBoundBox(new Rectangle(0, 0, this.getWidth(), this.getHeight()));
+            OM.addObjct(rangeObj);
+            OM.setOutRange(rangeObj.getBoundBox());
+            ((JFrame) parent).revalidate();
+            ((JFrame) parent).addKeyListener(KIK);
+            ((JFrame) parent).addWindowListener(this);
+            ((JFrame) parent).requestFocusInWindow();
+        }
 
-	@Override
-	public void panelrun() {
-		OM.running();
-		repaint();
-	}
+    }
 
-	@Override
-	protected void paintComponent(Graphics g) {
+    @Override
+    public void panelrun() {
+        OM.running();
+        repaint();
+    }
 
-		OM.show(g);
-	}
+    @Override
+    protected void paintComponent(Graphics g) {
 
-	@Override
-	public void windowOpened(WindowEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+        OM.show(g);
+    }
 
-	@Override
-	public void windowClosing(WindowEvent e) {
-		// TODO Auto-generated method stub
-		OM.shutdown();
-	}
+    @Override
+    public void windowOpened(WindowEvent e) {
+        // TODO Auto-generated method stub
 
-	@Override
-	public void windowClosed(WindowEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+    }
 
-	@Override
-	public void windowIconified(WindowEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+    @Override
+    public void windowClosing(WindowEvent e) {
+        // TODO Auto-generated method stub
+        OM.shutdown();
+    }
 
-	@Override
-	public void windowDeiconified(WindowEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+    @Override
+    public void windowClosed(WindowEvent e) {
+        // TODO Auto-generated method stub
 
-	@Override
-	public void windowActivated(WindowEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+    }
 
-	@Override
-	public void windowDeactivated(WindowEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
+    @Override
+    public void windowIconified(WindowEvent e) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void windowDeiconified(WindowEvent e) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void windowActivated(WindowEvent e) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void windowDeactivated(WindowEvent e) {
+        // TODO Auto-generated method stub
+
+    }
 
 }
