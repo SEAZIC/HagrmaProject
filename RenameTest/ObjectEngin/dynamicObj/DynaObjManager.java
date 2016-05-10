@@ -5,14 +5,15 @@ import java.util.HashMap;
 
 import ObjectEngin.ComonObject.BaseObject;
 
-/**
+/**<PRE>
  *  ダイナミックオブジェクトマネージャー
  *  オブジェクトネームとオブジェクトクラスをマッピングするクラス
  *  インスタンスを生成した後，
  *  テンプレートとなるオブジェクトをaddメソッドを使用して追加します．
  *  getメソッドにオブジェクトネームを指定した場合，
  *  追加されたオブジェクトの中からオブジェクトネームが同じもののインスタンスを生成します．
- * */
+ * </PRE>
+ */
 public class DynaObjManager {
 
 	private ArrayList<Class<? extends BaseObject>> templeobj;

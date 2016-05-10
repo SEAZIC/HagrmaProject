@@ -8,9 +8,14 @@ import ObjectEngin.ComonObject.BaseObject;
 import ObjectEngin.MapTool.MapClass;
 import ObjectEngin.MapTool.MapReader;
 
-/** ダイナミックオブジェクトクリエイター
- * ダイナミックオブジェクトマネージャーとダイナミックオブジェクトリーダーとオブジェクトマネージャーを関連づけ，ダイナミックオブジェクトを生成する
- *  */
+/**
+ * <PRE>
+ * ダイナミックオブジェクトクリエイター
+ * ダイナミックオブジェクトマネージャーと
+ * ダイナミックオブジェクトリーダーと
+ * オブジェクトマネージャーを関連づけ，ダイナミックオブジェクトを生成する
+ * </PRE> 
+ */
 public class DynaObjCreater {
 
 	protected DynaObjReader DOR;

@@ -8,9 +8,11 @@ import BaseSystem.TextEdit.TextReader;
 import ObjectEngin.ComonObject.BaseObject;
 
 /**
+ * </PRE>
  * ダイナミックオブジェクトリーダー
  * テキストファイルからダイナミックオブジェクトマネージャーのマッピングを利用して一行ごとにオブジェクトを生成する
- * */
+ * </PRE>
+ */
 public class DynaObjReader {
 
 	private TextReader TR;
